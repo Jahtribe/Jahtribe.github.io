@@ -1,4 +1,3 @@
-@import "style.less";
 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic);
@@ -9,8 +8,10 @@
 	font-family: 'ThemeIcons';
 	font-weight: normal;
 	font-style: normal;
-	url('fonts/ThemeIcons.woff?eq79sn') format('woff'),
-	url('fonts/ThemeIcons.ttf?eq79sn') format('truetype'),
+
+		src:url('fonts/ThemeIcons.woff') format('woff');
+		src:url('fonts/ThemeIcons.ttf') format('truetype');
+		src:url('fonts/ThemeIcons.svg') format('svg');
 }
 
 [class^="ic-"], [class*=" ic-"] {
@@ -20,7 +21,7 @@
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: 8px;
+	line-height: 1;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
