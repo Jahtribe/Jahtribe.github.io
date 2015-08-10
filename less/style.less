@@ -2,7 +2,7 @@
 @import "normalize.less";
 
 .i {
-  width: 1180px;
+  width: 1200px;
   padding: 0;
   margin: 0 auto;
 }
@@ -40,7 +40,8 @@ body {
 
 .login {
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-right: 13px;
   float: right;
   width: 250px;
 
@@ -68,33 +69,48 @@ body {
 .search {
   float: left;
   margin-top: 10px;
-  margin-left: 125px;
+  margin-left: 130px;
   width: 620px;
   height: 40px;
 
+&_i{
+  width:620px;
+}
+
   input[type="search"] {
-    width: 545px;
-    border: solid 2px #2c4058;
+    font-size: 14px;
+    float: left;
+    width: 543px;
+    border-left: 2px solid #2c4058;
+    border-top: solid 2px #2c4058;
+    border-bottom: solid 2px #2c4058;
+    border-right: none;
     min-height: 35px;
-    padding: 0;
-    border-radius: 3px;
+    padding: 0  0 0 5px;
+    border-radius: 3px 0 0 3px;
     margin: 0;
     height: 40px;
   }
   button[type="submit"] {
+    float: left;
     margin: 0;
     padding: 0;
     width: 57px;
     height: 40px;
     text-decoration: none;
     color: #000;
-    border-radius: 3px;
+    border-radius: 0 3px 3px 0;
     background: linear-gradient(#ffd05b, #ffa25e);
-    border: 1px solid #e19855;
+    border-right: 1px solid #e19855;
+    border-top: 1px solid #e19855;
+    border-bottom: 1px solid #e19855;
+    border-left: none;
     position: relative;
-    z-index: 1000;
-    left: -6px;
-    top: -1px;
+    top: 2px;
+
+
+
+
     font-size: 12px;
   }
   input[type="submit"]::before {
@@ -121,7 +137,7 @@ body {
 
   &__list {
     margin: 0;
-    padding: 10px 0 0 135px;
+    padding: 10px 0 0 130px;
 
     i {
       font-size: 16px;
@@ -134,9 +150,10 @@ body {
     margin-right: 15px;
     border-right: solid 1px #ebebeb;
     height: 30px;
+    padding-right: 7px;
   }
   li:nth-child(4n) {
-    margin-right: 400px;
+    margin-right: 380px;
   }
 
   &__link {
@@ -154,8 +171,8 @@ body {
   margin-left: 90px;
   &__list {
     list-style: none;
-    margin-bottom: 10px;
-    margin-top: 12px;
+    margin-bottom:0;
+    margin-top: 20px;
 
   }
   &__item {
@@ -242,8 +259,8 @@ body {
 
 .catalog {
   float: right;
-  width: 930px;
-  margin-left: 10px;
+  width: 940px;
+  margin: 0;
   &__title {
     padding-left: 10px;
     font-size: 18px;
@@ -251,12 +268,16 @@ body {
     border-bottom: solid 1px #eeeeee;
     padding-bottom: 5px;
     margin-left: 10px;
+    margin-bottom: 20px;
+
 
   }
 }
 
-.product__list {
-  margin-left: 10px;
+.product-list {
+  margin:0;
+  padding: 0;
+  display: flex;
 }
 
 .filter {
@@ -277,11 +298,13 @@ body {
     list-style: none;
 
   }
-  &__item-active {
+  .filter__item_active{
     color: #000;
     display: inline-block;
-    margin-right: 10px;
     list-style: none;
+    padding: 2px 5px 2px 5px;
+    background-color:#f3f3f3;
+
 
   }
   li:nth-child(3n) {
@@ -296,32 +319,31 @@ body {
   }
 
   .active {
-    padding: 2px;
+    padding: 1px;
     background-color: #f3f3f3;
     border: solid 1px #e1e1e1;
     border-radius: 3px;
     font-weight: bold;
   }
-  .filter__item-active {
-    background-color: #e5e5e5;
-    padding: 6px 8px;
-  }
 
 }
 
-.product__item {
+.product {
   padding: 5px 10px 5px 20px;
   display: inline-block;
-  width: 220px;
+  width: 228px;
   height: 385px;
   vertical-align: top;
-  border: 1px solid #d1d5d9;
+  border-left: 1px solid #d1d5d9;
+  border-top: 1px solid #d1d5d9;
+  border-bottom: 1px solid #d1d5d9;
   box-sizing: border-box;
   margin-bottom: 5px;
   .product__link {
     align-content: center;
     text-decoration: none;
     color: #5590d4;
+    font-size: 14px;
   }
   p {
     color: #f48b4b;
@@ -339,6 +361,14 @@ body {
     font-size: 14px;
   }
 }
+
+.product-4{
+  border-right: 1px solid #d1d5d9;
+}
+.product-8{
+  border-right: 1px solid #d1d5d9;
+}
+
 
 .product__btn {
   color: #000;
@@ -360,7 +390,7 @@ body {
   font-size: 12px;
   width: 300px;
   &__list {
-    padding-top: 25px;
+    padding-top: 30px;
     padding-left: 15px;
     margin-bottom: 10px;
     margin-top: 0;
@@ -382,6 +412,17 @@ body {
   }
   a:active {
     background: #e5e5e5;
+  }
+}
+.paginator-top{
+  margin-bottom: 5px;
+}
+.paginator-bottom{
+  .paginator__list {
+    padding-top: 12px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+
   }
 }
 
@@ -419,6 +460,7 @@ body {
 .footer-search {
   float: right;
   width: 400px;
+  margin-right: 10px;
   label {
     font-size: 14px;
     color: #858484
